@@ -225,6 +225,19 @@
 					<family>mac</family>
 				</os>
 			</activation>
+			<build>
+				<!-- because ui.test.vmargs (below) and useUIThread (above) did not work. -->
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.tycho</groupId>
+						<artifactId>tycho-surefire-plugin</artifactId>
+						<version>${tycho-version}</version>
+						<configuration>
+							<argLine>-XstartOnFirstThread</argLine>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
 			<properties>
 				<ui.test.vmargs>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts -Djava.awt.headless=false</ui.test.vmargs>
 			</properties>
