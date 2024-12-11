@@ -18,7 +18,7 @@
 -showsplash org.eclipse.epp.package.common
 --launcher.defaultAction openFile
       </programArgs>
-      <vmArgs>-Dosgi.requiredJavaVersion=17
+      <vmArgs>-Dosgi.requiredJavaVersion=21
 -Dosgi.instance.area.default=@user.home/eclipse-workspace
 -Dsun.java.command=Eclipse
 -Xms256m
@@ -208,7 +208,7 @@ United States, other countries, or both.
 
       <feature id="org.eclipse.egit" installMode="root"/>
       <feature id="org.eclipse.egit.gitflow.feature" installMode="root"/>
-      <feature id="org.eclipse.mylyn.wikitext.editors_feature" installMode="root"/>
+      <feature id="org.eclipse.mylyn.wikitext.feature" installMode="root"/>
       <feature id="org.eclipse.corrosion.feature" installMode="root"/>
       <feature id="org.eclipse.tm.terminal.feature" installMode="root"/>
    </features>
